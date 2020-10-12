@@ -6,8 +6,6 @@ public class Collectable : MonoBehaviour
 {
     public static Collectable instance;
 
-    public int collectable = 0;
-
     private void Awake()
     {
         instance = this;
@@ -29,9 +27,8 @@ public class Collectable : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            collectable++;
+            LevelManager.instance.collectableCount++;
             UIController.instance.UpdateCollectableText();
-            Debug.Log("Player Collected Item");
             Destroy(gameObject);
         }
     }

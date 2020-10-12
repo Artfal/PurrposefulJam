@@ -17,7 +17,7 @@ public class UIController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        collectableText.text = Collectable.instance.collectable.ToString();
+        collectableText.text = LevelManager.instance.collectableCount.ToString();
     }
 
     // Update is called once per frame
@@ -28,6 +28,6 @@ public class UIController : MonoBehaviour
 
     public void UpdateCollectableText()
     {
-        collectableText.text = Collectable.instance.collectable.ToString();
+        collectableText.text = LevelManager.instance.collectableCount.ToString();
     }
 }
