@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 4317387675812092946}
   - component: {fileID: 4317387675812092947}
   - component: {fileID: 4317387675812093167}
+  - component: {fileID: 194588798}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -104,7 +105,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ed396f1507f18e74b9d05929b9d88bf5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1a9194e40541e404f972d21fca34bf94, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -128,7 +129,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07685268, y: -0.012857556}
+  m_Offset: {x: 0.021021843, y: -0.13485819}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -139,7 +140,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.41672963, y: 0.66620564}
+  m_Size: {x: 0.77652836, y: 0.6537987}
   m_EdgeRadius: 0
 --- !u!50 &4317387675812092947
 Rigidbody2D:
@@ -161,7 +162,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &4317387675812093167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +178,27 @@ MonoBehaviour:
   speed: 10
   jumpForce: 30
   theRB: {fileID: 4317387675812092947}
+  theAnim: {fileID: 194588798}
   groundPoint: {fileID: 4317387674962928710}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+--- !u!95 &194588798
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4317387675812092944}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0bb64d614d65a00459d578dbf9911cf8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

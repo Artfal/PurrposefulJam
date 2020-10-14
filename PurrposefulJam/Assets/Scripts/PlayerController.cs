@@ -8,11 +8,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce = 10f;
 
     public Rigidbody2D theRB;
+    public Animator theAnim;
+    public SpriteRenderer theSR;
 
     private bool isGrounded;
     public Transform groundPoint;
     public LayerMask whatIsGround;
-
 
     // Start is called before the first frame update
     void Start()
@@ -26,13 +27,25 @@ public class PlayerController : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundPoint.position, 0.2f, whatIsGround);
         Movement();
         Jump();
+
+        if(theRB.velocity.x < 0)
+        {
+            theSR.flipX = true;
+        } 
+        else if(theRB.velocity.x > 0)
+        {
+            theSR.flipX = false;
+        }
+
+        theAnim.SetFloat("isWalking", Mathf.Abs(theRB.velocity.x));
+        theAnim.SetBool("isGrounded", isGrounded);
     }
 
     private void Movement()
     {
         if (isGrounded)
         {
-            theRB.velocity = new Vector2(speed * Input.GetAxis("Horizontal"), theRB.velocity.y);
+            theRB.velocity = new Vector2(speed * Input.GetAxis("Horizontal"), theRB.velocity.y); 
         }
     }
 

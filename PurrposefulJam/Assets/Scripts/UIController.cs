@@ -8,6 +8,7 @@ public class UIController : MonoBehaviour
     public static UIController instance;
 
     public Text collectableText;
+    public GameObject textBox;
 
     private void Awake()
     {
@@ -18,6 +19,8 @@ public class UIController : MonoBehaviour
     void Start()
     {
         collectableText.text = LevelManager.instance.collectableCount.ToString();
+        textBox.SetActive(false);
+        
     }
 
     // Update is called once per frame
