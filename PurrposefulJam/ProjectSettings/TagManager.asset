@@ -44,3 +44,9 @@ TagManager:
   - name: Environment
     uniqueID: 1219725339
     locked: 0
+  - name: Player
+    uniqueID: 117453457
+    locked: 0
+  - name: ForeGround
+    uniqueID: 2644585033
+    locked: 0
